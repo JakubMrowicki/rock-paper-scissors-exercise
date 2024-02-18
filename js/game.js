@@ -1,21 +1,3 @@
-const playGame = (rounds) => {
-  let score = [0, 0]
-  for (let i = 0; i < rounds; i++) {
-    let input = prompt('Select(rock, paper or scissors)')
-    let result = playRound(input, getComputerChoice())
-    if (result === 1) {
-      score[0]++
-    } else if (result === 2) {
-      score[1]++
-    }
-    if (rounds - i === 1 && score[0] === score[1]) {
-      console.log('Tie breaker, play one more!')
-      i--
-    }
-  }
-  console.log(`Final score: ${score}`)
-}
-
 const rps = {
   element: {
     reset: document.querySelector('#reset-btn'),
